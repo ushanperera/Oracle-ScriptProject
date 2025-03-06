@@ -1,0 +1,16 @@
+SET SERVEROUTPUT ON;
+declare 
+vsql varchar2(32767);
+Cnt number;
+n number:=0;
+Cursor cur is select table_name from user_tables;
+begin
+For i in cur loop
+ vsql := 'Select Count(*) from '||i.table_name;
+execute immediate vsql into cnt;
+ --n := n+Cnt;
+ n:=1;
+ --dbms_output.put_line(i.table_name||'='||cnt);
+End loop;
+dbms_output.put_line('Total Count : '||n);
+End;

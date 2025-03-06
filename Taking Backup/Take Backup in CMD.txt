@@ -1,0 +1,27 @@
+C:>.......\ 
+	    
+backin up (Export)
+==================
+EXP HELP=y
+
+EXP hd/a FILE = c:\abc.dmp //ok
+
+
+
+EXP SYSTEM/a FILE = c:\abc.dmp OWNER=hr //(copy * tables of owner/schme hr)
+EXP SYSTEM/a FILE = c:\abc.dmp TABLES=(employees)
+
+
+restore(Import)
+===============
+IMP HELP=y
+
+IMP hd/a full=y file=c:\abc.dmp//ok
+
+
+
+IMP system/a file=c:\abc.dmp TOUSER=hd TABLES=(employees)
+IMP system/a file=c:\abc.dmp TOUSER=hd
+
+
+

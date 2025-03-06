@@ -1,0 +1,2 @@
+SELECT SUM(a2)        -------  or AVG,SQRT,MAX,MIN,STDDEV,STDEV,VARIANCE
+FROM emp

@@ -1,0 +1,13 @@
+CREATE USER username IDENTIFIED BY pw;
+DROP  USER username CASCADE;
+
+GRANT dba TO  username;
+
+
+GRANT INSERT,SELECT ON emp TO saman;
+GRANT DELETE ON emp TO kamal WITH GRANT OPTION;
+GRANT UPDATE(ename,sal)ON emp TO kamal;
+REVOKE INSERT ON emp TO saman;
+
+GRANT ALL ON emp TO saman;
+GRANT EXECUTE ON EMP TO PUBLIC; --or use 'ALL'

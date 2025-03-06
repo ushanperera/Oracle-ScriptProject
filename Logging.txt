@@ -1,0 +1,9 @@
+When we logging to the system
+
+DOS Prompt
+SQLPLUS [username]/[password]
+
+CONNECT SYSTEM/pw
+
+
+
